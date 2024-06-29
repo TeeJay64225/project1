@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <!-- Code to prevetn inspection of code -->
+    <script type="text/javascript">
+      //<![CDATA[
+      var show_msg = "";
+      if (show_msg !== "0") {
+        var options = {
+          view_src: "View Source is disabled!",
+          inspect_elem: "Inspect Element is disabled!",
+          right_click: "Right click is disabled!",
+          copy_cut_paste_content: "Cut/Copy/Paste is disabled!",
+          image_drop: "Image Drag-n-Drop is disabled!",
+        };
+      } else {
+        var options = "";
+      }
+
+      function nocontextmenu(e) {
+        return false;
+      }
+      document.oncontextmenu = nocontextmenu;
+      document.ondragstart = function () {
+        return false;
+      };
+
+      document.onmousedown = function (event) {
+        event = event || window.event;
+        if (event.keyCode === 123) {
+          if (show_msg !== "0") {
+            show_toast("inspect_elem");
+          }
+          return false;
+        }
+      };
+      document.onkeydown = function (event) {
+        event = event || window.event;
+        //alert(event.keyCode);   return false;
+        if (
+          event.keyCode === 123 ||
+          (event.ctrlKey && event.shiftKey && event.keyCode === 73) ||
+          (event.ctrlKey && event.shiftKey && event.keyCode === 75)
+        ) {
+          if (show_msg !== "0") {
+            show_toast("inspect_elem");
+          }
+          return false;
+        }
+        if (event.ctrlKey && event.keyCode === 85) {
+          if (show_msg !== "0") {
+            show_toast("view_src");
+          }
+          return false;
+        }
+      };
+      function addMultiEventListener(element, eventNames, listener) {
+        var events = eventNames.split(" ");
+        for (var i = 0, iLen = events.length; i < iLen; i++) {
+          element.addEventListener(events[i], function (e) {
+            e.preventDefault();
+            if (show_msg !== "0") {
+              show_toast(listener);
+            }
+          });
+        }
+      }
+      addMultiEventListener(document, "contextmenu", "right_click");
+      addMultiEventListener(
+        document,
+        "cut copy paste print",
+        "copy_cut_paste_content"
+      );
+      addMultiEventListener(document, "drag drop", "image_drop");
+      function show_toast(text) {
+        var x = document.getElementById("amm_drcfw_toast_msg");
+        x.innerHTML = eval("options." + text);
+        x.className = "show";
+        setTimeout(function () {
+          x.className = x.className.replace("show", "");
+        }, 3000);
+      }
+      //]]>
+    </script>
+    <!-- End of code -->
+
+    <link rel="icon" href="images/icon.ico" type="image/icon" sizes="40x40" />
+    <meta name="title" content="African Women  Lawyers Association | Ghana" />
+    <meta
+      name="description"
+      content="An apolitical, non-profit, non-denominational professional association comprising women lawyers in Ghana and across Africa."
+    />
+    <meta
+      name="keywords"
+      content="AWLA Ghana, African Women Lawyers Association, AWLA"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="author" content="Tech Van-Ess" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS Files============================= -->
+    <link
+      id="bootstrap"
+      href="css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.theme.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.transitions.css" rel="stylesheet" type="text/css" />
+    <link href="css/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.countdown.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <!-- color scheme -->
+    <link
+      id="colors"
+      href="css/colors/scheme-01.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/coloring.css" rel="stylesheet" type="text/css" />
+    <!-- RS5.0 Stylesheet -->
+    <link rel="stylesheet" href="revolution/css/settings.css" type="text/css" />
+    <link rel="stylesheet" href="revolution/css/layers.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="revolution/css/navigation.css"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="topbar" class="topbar-noborder">
+        <div class="container">
+          <div class="topbar-left sm-hide">
+            <span class="topbar-widget tb-social">
+                <a href="index.html#"><i
+              id="instagramIcon"
+              class="fab fa-instagram"
+              style="color: #c13584"
+             ></i></a>
+                                   <a href="index.html#"><i class="fa-brands fa-x-twitter" style="color: #fafafa"></i></a>
+                  <a href="index.html#"><i class="fab fa-linkedin" style="color: #5d6ff9"></i></a>
+            </span>
+          </div>
+          <div class="topbar-right">
+            <div class="topbar-right">
+              <span class="topbar-widget"
+                ><a href="index.html#">Privacy Policy</a></span
+              >
+              <span class="topbar-widget"
+                ><a href="index.html#">Become a Member</a></span
+              >
+              <span class="topbar-widget"><a href="faq.html">FAQs</a></span>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- header begin -->
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="de-flex sm-pt10">
+                <div class="de-flex-col">
+                  <!-- logo begin -->
+                  <div id="logo">
+                    <a href="index.html">
+                      <img alt="" class="logo" src="images/awlalogo.png" />
+                      <img alt="" class="logo-2" src="images/awlalogo.png" />
+                    </a>
+                  </div>
+                  <!-- logo close -->
+                </div>
+                <div class="de-flex-col header-col-mid">
+                  <!-- mainmenu begin -->
+                  <ul id="mainmenu">
+                    <li>
+                      <a href="index.html">Home</a>
+                      <!--  -->
+                    </li>
+                    <li>
+                      <a href="about.html">About</a>
+                      <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">The Team</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="news.html">News</a>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li>
+                      <a href="gallery.html">Gallery</a>
+                    </li>
+                  </ul>
+                  <!-- mainmenu close -->
+                </div>
+                <div class="de-flex-col">
+                  <div class="h-phone md-hide">
+                    <span>Need&nbsp;Help?</span><i class="fa fa-phone"></i> 1
+                    200 300 9000
+                  </div>
+                  <span id="menu-btn"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header close -->
+      <!-- content begin -->
+      <div class="no-bottom no-top" id="content">
+        <div id="top"></div>
+        <!-- section begin -->
+        <section id="subheader" class="jarallax text-white">
+          <img
+            src="images/background/subheader3.jpg"
+            class="jarallax-img"
+            alt=""
+          />
+          <div class="center-y relative text-center">
+            <div class="container">
+              <div class="row">
+                <div class="col text-center">
+                  <div class="spacer-single"></div>
+                  <h1>FAQs</h1>
+                  <p>Reputation. Respect. Result.</p>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- section close -->
+        <section id="section-features">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 mb30">
+                <div class="box-highlight">
+                  <div class="heading text-center text-light">
+                    <h3>General</h3>
+                  </div>
+                  <div class="content">
+                    <div class="accordion">
+                      <div class="accordion-section">
+                        <div
+                          class="accordion-section-title"
+                          data-tab="#accordion-1"
+                        >
+                          What are the qualifications of a lawyer?
+                        </div>
+                        <div class="accordion-section-content" id="accordion-1">
+                          <p>
+                            At vero eos et accusamus et iusto odio dignissimos
+                            ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas
+                            molestias excepturi sint occaecati cupiditate non
+                            provident, similique sunt in culpa qui officia
+                            deserunt mollitia animi, id est laborum et dolorum
+                            fuga. Et harum quidem rerum facilis est et expedita
+                            distinctio.
+                          </p>
+                        </div>
+                        <div
+                          class="accordion-section-title"
+                          data-tab="#accordion-2"
+                        >
+                          What can a lawyer do for me?
+                        </div>
+                        <div class="accordion-section-content" id="accordion-2">
+                          <p>
+                            At vero eos et accusamus et iusto odio dignissimos
+                            ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas
+                            molestias excepturi sint occaecati cupiditate non
+                            provident, similique sunt in culpa qui officia
+                            deserunt mollitia animi, id est laborum et dolorum
+                            fuga. Et harum quidem rerum facilis est et expedita
+                            distinctio.
+                          </p>
+                        </div>
+                        <div
+                          class="accordion-section-title"
+                          data-tab="#accordion-3"
+                        >
+                          What is legal advice?
+                        </div>
+                        <div class="accordion-section-content" id="accordion-3">
+                          <p>
+                            At vero eos et accusamus et iusto odio dignissimos
+                            ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas
+                            molestias excepturi sint occaecati cupiditate non
+                            provident, similique sunt in culpa qui officia
+                            deserunt mollitia animi, id est laborum et dolorum
+                            fuga. Et harum quidem rerum facilis est et expedita
+                            distinctio.
+                          </p>
+                        </div>
+                        <div
+                          class="accordion-section-title"
+                          data-tab="#accordion-4"
+                        >
+                          How much will my lawyer cost?
+                        </div>
+                        <div class="accordion-section-content" id="accordion-4">
+                          <p>
+                            At vero eos et accusamus et iusto odio dignissimos
+                            ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas
+                            molestias excepturi sint occaecati cupiditate non
+                            provident, similique sunt in culpa qui officia
+                            deserunt mollitia animi, id est laborum et dolorum
+                            fuga. Et harum quidem rerum facilis est et expedita
+                            distinctio.
+                          </p>
+                        </div>
+                        <div
+                          class="accordion-section-title"
+                          data-tab="#accordion-5"
+                        >
+                          How do I find a lawyer?
+                        </div>
+                        <div class="accordion-section-content" id="accordion-5">
+                          <p>
+                            At vero eos et accusamus et iusto odio dignissimos
+                            ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas
+                            molestias excepturi sint occaecati cupiditate non
+                            provident, similique sunt in culpa qui officia
+                            deserunt mollitia animi, id est laborum et dolorum
+                            fuga. Et harum quidem rerum facilis est et expedita
+                            distinctio.
+                          </p>
+                        </div>
+                        <div
+                          class="accordion-section-title"
+                          data-tab="#accordion-6"
+                        >
+                          How do I choose which lawyer is right for me?
+                        </div>
+                        <div class="accordion-section-content" id="accordion-6">
+                          <p>
+                            At vero eos et accusamus et iusto odio dignissimos
+                            ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas
+                            molestias excepturi sint occaecati cupiditate non
+                            provident, similique sunt in culpa qui officia
+                            deserunt mollitia animi, id est laborum et dolorum
+                            fuga. Et harum quidem rerum facilis est et expedita
+                            distinctio.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb30">
+                <div class="box-highlight s2">
+                  <div class="heading text-center text-light">
+                    <h3>Advanced Topics</h3>
+                  </div>
+                  <div class="content">
+                    <div class="accordion">
+                      <div class="accordion-section">
+                        <div
+                          class="accordion-section-title"
+                          data-tab="#accordion-b-1"
+                        >
+                          What are the qualifications of a lawyer?
+                        </div>
+                        <div
+                          class="accordion-section-content"
+                          id="accordion-b-1"
+                        >
+                          <p>
+                            At vero eos et accusamus et iusto odio dignissimos
+                            ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas
+                            molestias excepturi sint occaecati cupiditate non
+                            provident, similique sunt in culpa qui officia
+                            deserunt mollitia animi, id est laborum et dolorum
+                            fuga. Et harum quidem rerum facilis est et expedita
+                            distinctio.
+                          </p>
+                        </div>
+                        <div
+                          class="accordion-section-title"
+                          data-tab="#accordion-b-2"
+                        >
+                          What can a lawyer do for me?
+                        </div>
+                        <div
+                          class="accordion-section-content"
+                          id="accordion-b-2"
+                        >
+                          <p>
+                            At vero eos et accusamus et iusto odio dignissimos
+                            ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas
+                            molestias excepturi sint occaecati cupiditate non
+                            provident, similique sunt in culpa qui officia
+                            deserunt mollitia animi, id est laborum et dolorum
+                            fuga. Et harum quidem rerum facilis est et expedita
+                            distinctio.
+                          </p>
+                        </div>
+                        <div
+                          class="accordion-section-title"
+                          data-tab="#accordion-b-3"
+                        >
+                          What is legal advice?
+                        </div>
+                        <div
+                          class="accordion-section-content"
+                          id="accordion-b-3"
+                        >
+                          <p>
+                            At vero eos et accusamus et iusto odio dignissimos
+                            ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas
+                            molestias excepturi sint occaecati cupiditate non
+                            provident, similique sunt in culpa qui officia
+                            deserunt mollitia animi, id est laborum et dolorum
+                            fuga. Et harum quidem rerum facilis est et expedita
+                            distinctio.
+                          </p>
+                        </div>
+                        <div
+                          class="accordion-section-title"
+                          data-tab="#accordion-b-4"
+                        >
+                          How much will my lawyer cost?
+                        </div>
+                        <div
+                          class="accordion-section-content"
+                          id="accordion-b-4"
+                        >
+                          <p>
+                            At vero eos et accusamus et iusto odio dignissimos
+                            ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas
+                            molestias excepturi sint occaecati cupiditate non
+                            provident, similique sunt in culpa qui officia
+                            deserunt mollitia animi, id est laborum et dolorum
+                            fuga. Et harum quidem rerum facilis est et expedita
+                            distinctio.
+                          </p>
+                        </div>
+                        <div
+                          class="accordion-section-title"
+                          data-tab="#accordion-b-5"
+                        >
+                          How do I find a lawyer?
+                        </div>
+                        <div
+                          class="accordion-section-content"
+                          id="accordion-b-5"
+                        >
+                          <p>
+                            At vero eos et accusamus et iusto odio dignissimos
+                            ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas
+                            molestias excepturi sint occaecati cupiditate non
+                            provident, similique sunt in culpa qui officia
+                            deserunt mollitia animi, id est laborum et dolorum
+                            fuga. Et harum quidem rerum facilis est et expedita
+                            distinctio.
+                          </p>
+                        </div>
+                        <div
+                          class="accordion-section-title"
+                          data-tab="#accordion-b-6"
+                        >
+                          How do I choose which lawyer is right for me?
+                        </div>
+                        <div
+                          class="accordion-section-content"
+                          id="accordion-b-6"
+                        >
+                          <p>
+                            At vero eos et accusamus et iusto odio dignissimos
+                            ducimus qui blanditiis praesentium voluptatum
+                            deleniti atque corrupti quos dolores et quas
+                            molestias excepturi sint occaecati cupiditate non
+                            provident, similique sunt in culpa qui officia
+                            deserunt mollitia animi, id est laborum et dolorum
+                            fuga. Et harum quidem rerum facilis est et expedita
+                            distinctio.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- content close -->
+      <a href="faq.html#" id="back-to-top"></a>
+      <!-- footer begin -->
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="widget">
+                <a href="index.html"
+                  ><img
+                    alt=""
+                    class="img-fluid mb20"
+                    src="images/logo-light.png"
+                /></a>
+                <address class="s1">
+                  <span
+                    ><i class="id-color fa fa-map-marker fa-lg"></i>08 W 36th
+                    St, New York, NY 10001</span
+                  >
+                  <span
+                    ><i class="id-color fa fa-phone fa-lg"></i>+1 333 9296</span
+                  >
+                  <span
+                    ><i class="id-color fa fa-envelope-o fa-lg"></i
+                    ><a href="mailto:contact@example.com"
+                      >contact@example.com</a
+                    ></span
+                  >
+                  <span
+                    ><i class="id-color fa fa-file-pdf-o fa-lg"></i
+                    ><a href="index.html#">Download Brochure</a></span
+                  >
+                </address>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h4 class="id-color mb20">Practice Areas</h4>
+              <ul class="ul-style-2">
+                <li>Corporate and M&A</li>
+                <li>Construction and Real Estate</li>
+                <li>Commercial Duspute Resolution</li>
+                <li>Employment</li>
+                <li>Banking and Finance</li>
+              </ul>
+            </div>
+            <div class="col-lg-4">
+              <h4 class="id-color">Newsletter</h4>
+              <p>
+                Signup for our newsletter to get the latest news, updates and
+                special offers in your inbox.
+              </p>
+              <form
+                action="https://www.madebydesignesia.com/themes/justica/blank.php"
+                class="row"
+                id="form_subscribe"
+                method="post"
+                name="form_subscribe"
+              >
+                <div class="col text-center">
+                  <input
+                    class="form-control"
+                    id="name_1"
+                    name="name_1"
+                    placeholder="enter your email"
+                    type="text"
+                  />
+                  <a href="index.html#" id="btn-submit"
+                    ><i class="fa fa-long-arrow-right"></i
+                  ></a>
+                  <div class="clearfix"></div>
+                </div>
+              </form>
+              <div class="spacer-10"></div>
+              <small>Your email is safe with us. We don't spam.</small>
+            </div>
+          </div>
+        </div>
+        <div class="subfooter">
+          <div class="container">
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-6">
+                &copy; AWLA Ghana 2024 | Developed by
+                <a href="wa.me/14244429288">Digniverse LLC</a>
+              </div>
+              <div class="col-lg-6 text-lg-end">
+                <div class="social-icons">
+                   <a href="index.html#"><i
+              id="instagramIcon"
+              class="fab fa-instagram"
+              style="color: #c13584"
+             ></i></a>
+                  <a href="index.html#"><i class="fa-brands fa-x-twitter" style="color: #050505"></i></a>
+                  <a href="index.html#"><i class="fab fa-linkedin" style="color: #5d6ff9"></i></a>
+                  <a href="index.html#"
+                    ><i class="fa fa-pinterest fa-lg"></i
+                  ></a>
+                  <a href="index.html#"><i class="fa fa-rss fa-lg"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer close -->
+      <div id="preloader">
+        <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/enquire.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.plugin.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/jarallax.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/designesia.js"></script>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/667aece19d7f358570d34366/1i182qkf5';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+  </body>
+</html>

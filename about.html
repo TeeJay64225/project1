@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <!-- Code to prevetn inspection of code -->
+    <script type="text/javascript">
+      //<![CDATA[
+      var show_msg = "";
+      if (show_msg !== "0") {
+        var options = {
+          view_src: "View Source is disabled!",
+          inspect_elem: "Inspect Element is disabled!",
+          right_click: "Right click is disabled!",
+          copy_cut_paste_content: "Cut/Copy/Paste is disabled!",
+          image_drop: "Image Drag-n-Drop is disabled!",
+        };
+      } else {
+        var options = "";
+      }
+
+      function nocontextmenu(e) {
+        return false;
+      }
+      document.oncontextmenu = nocontextmenu;
+      document.ondragstart = function () {
+        return false;
+      };
+
+      document.onmousedown = function (event) {
+        event = event || window.event;
+        if (event.keyCode === 123) {
+          if (show_msg !== "0") {
+            show_toast("inspect_elem");
+          }
+          return false;
+        }
+      };
+      document.onkeydown = function (event) {
+        event = event || window.event;
+        //alert(event.keyCode);   return false;
+        if (
+          event.keyCode === 123 ||
+          (event.ctrlKey && event.shiftKey && event.keyCode === 73) ||
+          (event.ctrlKey && event.shiftKey && event.keyCode === 75)
+        ) {
+          if (show_msg !== "0") {
+            show_toast("inspect_elem");
+          }
+          return false;
+        }
+        if (event.ctrlKey && event.keyCode === 85) {
+          if (show_msg !== "0") {
+            show_toast("view_src");
+          }
+          return false;
+        }
+      };
+      function addMultiEventListener(element, eventNames, listener) {
+        var events = eventNames.split(" ");
+        for (var i = 0, iLen = events.length; i < iLen; i++) {
+          element.addEventListener(events[i], function (e) {
+            e.preventDefault();
+            if (show_msg !== "0") {
+              show_toast(listener);
+            }
+          });
+        }
+      }
+      addMultiEventListener(document, "contextmenu", "right_click");
+      addMultiEventListener(
+        document,
+        "cut copy paste print",
+        "copy_cut_paste_content"
+      );
+      addMultiEventListener(document, "drag drop", "image_drop");
+      function show_toast(text) {
+        var x = document.getElementById("amm_drcfw_toast_msg");
+        x.innerHTML = eval("options." + text);
+        x.className = "show";
+        setTimeout(function () {
+          x.className = x.className.replace("show", "");
+        }, 3000);
+      }
+      //]]>
+    </script>
+    <!-- End of code -->
+
+    <link rel="icon" href="images/icon.ico" type="image/icon" sizes="40x40" />
+    <meta name="title" content="African Women  Lawyers Association | Ghana" />
+    <meta
+      name="description"
+      content="An apolitical, non-profit, non-denominational professional association comprising women lawyers in Ghana and across Africa."
+    />
+    <meta
+      name="keywords"
+      content="AWLA Ghana, African Women Lawyers Association, AWLA"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="author" content="Tech Van-Ess" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS Files============================= -->
+    <link
+      id="bootstrap"
+      href="css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.theme.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.transitions.css" rel="stylesheet" type="text/css" />
+    <link href="css/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.countdown.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <!-- color scheme -->
+    <link
+      id="colors"
+      href="css/colors/scheme-01.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/coloring.css" rel="stylesheet" type="text/css" />
+    <!-- RS5.0 Stylesheet -->
+    <link rel="stylesheet" href="revolution/css/settings.css" type="text/css" />
+    <link rel="stylesheet" href="revolution/css/layers.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="revolution/css/navigation.css"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="topbar" class="topbar-noborder">
+        <div class="container">
+          <div class="topbar-left sm-hide">
+            <span class="topbar-widget tb-social">
+                 <a href="index.html#"><i
+              id="instagramIcon"
+              class="fab fa-instagram"
+              style="color: #c13584"
+             ></i></a>
+                  <a href="index.html#"><i class="fa-brands fa-x-twitter" style="color: #fafafa"></i></a>
+                  <a href="index.html#"><i class="fab fa-linkedin" style="color: #5d6ff9"></i></a>
+            </span>
+          </div>
+          <div class="topbar-right">
+            <div class="topbar-right">
+              <span class="topbar-widget"
+                ><a href="index.html#">Privacy Policy</a></span
+              >
+              <span class="topbar-widget"
+                ><a href="index.html#">Become a Member</a></span
+              >
+              <span class="topbar-widget"><a href="faq.html">FAQs</a></span>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- header begin -->
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="de-flex sm-pt10">
+                <div class="de-flex-col">
+                  <!-- logo begin -->
+                  <div id="logo">
+                    <a href="index.html">
+                      <img alt="" class="logo" src="images/awlalogo.png" />
+                      <img alt="" class="logo-2" src="images/awlalogo.png" />
+                    </a>
+                  </div>
+                  <!-- logo close -->
+                </div>
+                <div class="de-flex-col header-col-mid">
+                  <!-- mainmenu begin -->
+                  <ul id="mainmenu">
+                    <li>
+                      <a href="index.html">Home</a>
+                      <!--  -->
+                    </li>
+                    <li>
+                      <a href="about.html">About</a>
+                      <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">The Team</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="news.html">News</a>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li>
+                      <a href="gallery.html">Gallery</a>
+                    </li>
+                  </ul>
+                  <!-- mainmenu close -->
+                </div>
+                <div class="de-flex-col">
+                  <div class="h-phone md-hide">
+                    <span>Need&nbsp;Help?</span><i class="fa fa-phone"></i>
+                    <a href="tel:+233302251296">+233302251296</a>
+                  </div>
+                  <span id="menu-btn"></span>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header close -->
+      <!-- content begin -->
+      <div class="no-bottom no-top" id="content">
+        <div id="top"></div>
+        <!-- section begin -->
+        <section id="subheader" class="jarallax text-white">
+          <img
+            src="images/background/lawyer1.jpg"
+            class="jarallax-img"
+            alt=""
+          />
+          <div class="center-y relative text-center">
+            <div class="container">
+              <div class="row">
+                <div class="col text-center">
+                  <div class="spacer-single"></div>
+                  <h1>About Us</h1>
+                  <p>Reputation. Respect. Result.</p>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- section close -->
+        <section aria-label="section" data-bgcolor="#ffffff">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-5">
+                <span class="p-title">Vision and Mission</span><br />
+                <h2>Empowering Women and Children: Our Vision, Our Mission</h2>
+                <p>
+                  We envision a world where women and children flourish without fear, 
+                  enjoying equal rights and opportunities, and living with dignity and 
+                  respect. Our mission is to tirelessly advocate for, protect, and uplift 
+                  the rights and well-being of women and children throughout Ghana and across Africa. 
+                  Through compassionate advocacy, legal support, and community engagement, we aim to 
+                  create lasting change, empowering every woman and child to live their lives free from 
+                  abuse and injustice. Together, we strive to build a brighter future where every individual 
+                  can thrive, regardless of gender or age.
+                </p>
+              </div>
+              <div class="col-md-6 offset-md-1">
+                <div class="de-images">
+                  <!-- <div class="di-text text-white bg-color">
+                    <h1>2500</h1>
+                    <span>Solved Cases</span>
+                  </div> -->
+                  <img class="di-small-2" src="images/misc/d2.jpg" alt="" />
+                  <img
+                    class="di-big img-fluid"
+                    src="images/misc/d1.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section data-bgcolor="#111111" class="text-light">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-5 offset-lg-7">
+                <span class="p-title">Aims and Objectives</span><br />
+                <h2>Fostering Equality, Empowering Change: <br />Our Aims and Objectives</h2>
+                <!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      id="pills-home-tab"
+                      data-toggle="pill"
+                      href="about.html#pills-home"
+                      role="tab"
+                      aria-controls="pills-home"
+                      aria-selected="true"
+                      >Our Attorneys</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="pills-profile-tab"
+                      data-toggle="pill"
+                      href="about.html#pills-profile"
+                      role="tab"
+                      aria-controls="pills-profile"
+                      aria-selected="false"
+                      >Our Expertise</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="pills-contact-tab"
+                      data-toggle="pill"
+                      href="about.html#pills-contact"
+                      role="tab"
+                      aria-controls="pills-contact"
+                      aria-selected="false"
+                      >Our Firm</a
+                    >
+                  </li>
+                </ul> -->
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="pills-home"
+                    role="tabpanel"
+                    aria-labelledby="pills-home-tab"
+                  >
+                    <p>
+                      We're committed to advancing the core values and objectives upheld 
+                      by esteemed organizations like the African Union, the United Nations, 
+                      the African Commission on Human and Peoples' Rights, and the African 
+                      Charter on the Rights and Welfare of the Child. Our mission is to elevate 
+                      the legal standing of women and children, ensuring their voices are heard 
+                      and their rights protected.
+
+                      We achieve this through a multifaceted approach: advocating for legislative 
+                      reforms, fostering public awareness, and empowering women and children to 
+                      claim their rightful place in society. By strengthening legal frameworks, 
+                      facilitating information exchange, and nurturing networks among African 
+                      women lawyers, we strive to create lasting change. Our efforts extend beyond
+                       legalities; we actively promote gender equality, striving to increase women's 
+                       representation in positions of power and decision-making roles.
+                      At the heart of our mission lies support and solidarity. We provide a platform for
+                       African lawyers to connect, collaborate, and access resources. 
+                       Through these collective endeavors, we empower women and children to shape
+                        their futures and contribute meaningfully to their communities.
+                    </p>
+                  </div>
+                  <!-- <div
+                    class="tab-pane fade"
+                    id="pills-profile"
+                    role="tabpanel"
+                    aria-labelledby="pills-profile-tab"
+                  >
+                    <p>
+                      Ad pariatur nostrud pariatur exercitation ipsum ipsum
+                      culpa mollit commodo mollit ex. Aute sunt incididunt amet
+                      commodo est sint nisi deserunt pariatur do. Aliquip ex
+                      eiusmod voluptate exercitation cillum id incididunt elit
+                      sunt. Qui minim sit magna Lorem id et dolore velit Lorem
+                      amet exercitation duis deserunt. Anim id labore elit
+                      adipisicing ut in id occaecat pariatur ut ullamco ea
+                      tempor duis.
+                    </p>
+                  </div> -->
+                  <!-- <div
+                    class="tab-pane fade"
+                    id="pills-contact"
+                    role="tabpanel"
+                    aria-labelledby="pills-contact-tab"
+                  >
+                    <p>
+                      Est quis nulla laborum officia ad nisi ex nostrud culpa
+                      Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut
+                      duis ipsum nisi elit fugiat commodo sunt reprehenderit
+                      laborum veniam eu veniam. Eiusmod minim exercitation
+                      fugiat irure ex labore incididunt do fugiat commodo
+                      aliquip sit id deserunt reprehenderit aliquip nostrud.
+                      Amet ex cupidatat excepteur aute veniam incididunt mollit
+                      cupidatat esse irure officia elit do ipsum ullamco Lorem.
+                    </p>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="jarallax image-container col-md-6 pull-right">
+            <img src="images/background/9.jpg" class="jarallax-img" alt="" />
+          </div>
+        </section>
+
+        <!-- Achievments -->
+      </section>
+      <section id="section-practice-areas">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="text-center">
+                <h2>Key accomplishments since establishment</h2>
+                <div class="small-border"></div>
+              </div>
+            </div>
+            <div class="col-md-6 offset-md-3 text-center">
+              <p>
+                Over the years, the African Women Lawyers Association, Ghana, 
+                has made significant strides in advancing the rights and well-being 
+                of women and children across the nation. Here are some noteworthy achievements:
+              </p>
+            </div>
+            <div class="spacer-single"></div>
+            <div class="col-md-4">
+              <ul class="ul-style-2 wow fadeInRight" data-wow-delay=".2s">
+                <li>Empowering Women and Children: Rights Awareness and Legal Access</li>
+                <li>Influencing Child Rights Act Adoption & Law Reforms for Gender Equality</li>
+                <li>Open Forums: Addressing Issues Impacting Women and Children</li>
+                
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="ul-style-2 wow fadeInRight" data-wow-delay=".4s">
+                <li>Domestic Violence</li>
+                <li>Gender Inequality And Other Forms Of Discrimination Against Women</li>
+                <li>Promoting Their Rights And Interests</li>
+                
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="ul-style-2 wow fadeInRight" data-wow-delay=".6s">
+                <li>Mutilation, Sexual Harassment</li>
+                <li>Advocating Against Discrimination Towards Women and Children</li>
+                <li>Promoting Their Rights And Interests</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Milestones -->
+      </section>
+      <section id="section-practice-areas">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="text-center">
+                <h2>Milestones</h2>
+                <div class="small-border"></div>
+              </div>
+            </div>
+            <div class="spacer-single"></div>
+            <div class="col-md-4">
+              <ul class="ul-style-2 wow fadeInRight" data-wow-delay=".2s">
+               
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="ul-style-2 wow fadeInRight" data-wow-delay=".4s">
+                <li>Probono Services</li>
+                <li>Raising Confident And Bold Children</li>
+                <li>Promulgation Of Law Against Domestic Violence, Sexual Harrassment</li>
+                <li>Child Abuse, Creation Of Help Centres</li>
+              </ul>
+            </div>
+          
+          </div>
+        </div>
+      </section>
+
+      <!-- Present Initiatives and Project -->
+    </section>
+    <section id="section-practice-areas">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="text-center">
+              <h2>Present Initiatives/Projects</h2>
+              <div class="small-border"></div>
+            </div>
+          </div>
+          <div class="spacer-single"></div>
+          <div class="col-md-4">
+            <ul class="ul-style-2 wow fadeInRight" data-wow-delay=".2s">
+              <li>Law Providing For Equitable Distribution Of Property At Divorce</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="ul-style-2 wow fadeInRight" data-wow-delay=".4s">
+              <li>Home For Abused Women And Children</li>
+            
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="ul-style-2 wow fadeInRight" data-wow-delay=".4s">
+              <li>Home For Abused Women And Children</li>
+           
+            </ul>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Laywers -->
+        <!-- <section aria-label="section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <h2>Our Lawyer Team</h2>
+                <div class="small-border"></div>
+              </div>
+              <div
+                class="col-lg-4 col-md-6 col-sm-6 mb30 wow fadeInRight"
+                data-wow-delay=".2s"
+              >
+                <div class="f-profile text-center">
+                  <div class="fp-wrap f-invert">
+                    <div class="fpw-overlay">
+                      <div class="fpwo-wrap">
+                        <div class="fpwow-icons">
+                          <a href="about.html#"
+                            ><i class="fa fa-facebook fa-lg"></i
+                          ></a>
+                          <a href="about.html#"
+                            ><i class="fa fa-twitter fa-lg"></i
+                          ></a>
+                          <a href="about.html#"
+                            ><i class="fa fa-linkedin fa-lg"></i
+                          ></a>
+                          <a href="about.html#"
+                            ><i class="fa fa-pinterest fa-lg"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fpw-overlay-btm"></div>
+                    <img
+                      src="images/team/1.jpg"
+                      class="fp-image img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <h4>Fynley Wilkinson</h4>
+                  Managing Partner
+                </div>
+              </div>
+              <div
+                class="col-lg-4 col-md-6 col-sm-6 mb30 wow fadeInRight"
+                data-wow-delay=".4s"
+              >
+                <div class="f-profile text-center">
+                  <div class="fp-wrap f-invert">
+                    <div class="fpw-overlay">
+                      <div class="fpwo-wrap">
+                        <div class="fpwow-icons">
+                          <a href="about.html#"
+                            ><i class="fa fa-facebook fa-lg"></i
+                          ></a>
+                          <a href="about.html#"
+                            ><i class="fa fa-twitter fa-lg"></i
+                          ></a>
+                          <a href="about.html#"
+                            ><i class="fa fa-linkedin fa-lg"></i
+                          ></a>
+                          <a href="about.html#"
+                            ><i class="fa fa-pinterest fa-lg"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fpw-overlay-btm"></div>
+                    <img
+                      src="images/team/2.jpg"
+                      class="fp-image img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <h4>Sasha Welsh</h4>
+                  Senior Partner
+                </div>
+              </div>
+              <div
+                class="col-lg-4 col-md-6 col-sm-6 mb30 wow fadeInRight"
+                data-wow-delay=".6s"
+              >
+                <div class="f-profile text-center">
+                  <div class="fp-wrap f-invert">
+                    <div class="fpw-overlay">
+                      <div class="fpwo-wrap">
+                        <div class="fpwow-icons">
+                          <a href="about.html#"
+                            ><i class="fa fa-facebook fa-lg"></i
+                          ></a>
+                          <a href="about.html#"
+                            ><i class="fa fa-twitter fa-lg"></i
+                          ></a>
+                          <a href="about.html#"
+                            ><i class="fa fa-linkedin fa-lg"></i
+                          ></a>
+                          <a href="about.html#"
+                            ><i class="fa fa-pinterest fa-lg"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fpw-overlay-btm"></div>
+                    <img
+                      src="images/team/3.jpg"
+                      class="fp-image img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <h4>John Shepard</h4>
+                  Associate
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        
+        <section id="section-text" data-bgcolor="#111111" class="text-light">
+          <div class="container">
+            <div class="row align-items-center">
+              <div
+                class="col-lg-4 col-md-12 wow fadeInRight"
+                data-wow-delay=".2s"
+              >
+                <div class="de_count ultra-big s2 text-center">
+                  <h3 class="timer" data-to="20" data-speed="1000">20</h3>
+                  <span class="id-color">Years of Experience</span>
+                </div>
+              </div>
+              <div
+                class="col-lg-4 p-lg-5 mb-sm-30 wow fadeInRight"
+                data-wow-delay=".4s"
+              >
+                <span class="p-title">Welcome</span><br />
+                <h2>Justica is Your Best Partner for Legal Solutions</h2>
+              </div>
+              <div class="col-lg-4 wow fadeInRight" data-wow-delay=".6s">
+                <p>
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium voluptatum deleniti atque corrupti quos
+                  dolores et quas molestias excepturi sint occaecati cupiditate
+                  non provident, similique sunt in culpa qui officia deserunt
+                  mollitia animi, id est laborum et dolorum fuga.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <div class="feature-box f-boxed style-3 text-center">
+                  <i class="id-color icofont-letter"></i>
+                  <div class="text">
+                    <h4>Request Quote</h4>
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem.
+                  </div>
+                  <i class="wm icofont-letter"></i>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="feature-box f-boxed style-3 text-center">
+                  <i class="id-color icofont-investigation"></i>
+                  <div class="text">
+                    <h4>Investigation</h4>
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem.
+                  </div>
+                  <i class="wm icofont-investigation"></i>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="feature-box f-boxed style-3 text-center">
+                  <i class="id-color icofont-hand-power"></i>
+                  <div class="text">
+                    <h4>Case Fight</h4>
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem.
+                  </div>
+                  <i class="wm icofont-hand-power"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- content close -->
+      <a href="about.html#" id="back-to-top"></a>
+      <!-- footer begin -->
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="widget">
+                <a href="index.html"
+                  ><img alt="" class="img-fluid mb20" src="images/awlalogo.png"
+                /></a>
+                <address class="s1">
+                  <span>
+                    <i class="id-color fa fa-map-marker fa-lg"></i>
+                    H/No. C663/3, Anyemi Kpakpa Road
+                    <br />(Near Dua Clinic), Accra. <br />Ghana, West Africa
+                  </span>
+                  <span>
+                    <a href="tel:+233302251296">
+                      <i class="id-color fa fa-phone fa-lg"></i>
+                      +233302251296
+                    </a>
+                  </span>
+                  
+                  <span
+                    ><i class="id-color fa fa-envelope-o fa-lg"></i
+                    ><a href="mailto:contact@example.com"
+                      >awla1ghana@yahoo.com</a
+                    ></span
+                  >
+                  <span
+                    ><i class="id-color fa fa-file-pdf-o fa-lg"></i
+                    ><a href="index.html#">Download Brochure</a></span
+                  >
+                </address>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h4 class="id-color mb20">Quick Links</h4>
+              <ul class="ul-style-2">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Become a Member</a></li>
+                <li><a href="#">Frequently Asked Questions</a></li>
+                <li><a href="#">Upcoming AWLA Events</a></li>
+                <li><a href="#">Latest News</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4">
+              <h4 class="id-color">Newsletter</h4>
+              <p>
+                Signup for our newsletter to get the latest news, updates and
+                special offers in your inbox.
+              </p>
+              <form
+                action="subscribe.php"
+                class="row"
+                id="form_subscribe"
+                method="post"
+                name="form_subscribe"
+              >
+                <div class="col text-center">
+                  <input
+                    class="form-control"
+                    id="name_1"
+                    name="name_1"
+                    placeholder="enter your email"
+                    type="text"
+                  />
+                  <a href="subscribe.php" id="btn-submit"
+                    ><i class="fa fa-long-arrow-right"></i
+                  ></a>
+                  <div class="clearfix"></div>
+                </div>
+              </form>
+              <div class="spacer-10"></div>
+              <small>Your email is safe with us. We don't spam.</small>
+            </div>
+          </div>
+        </div>
+        <div class="subfooter">
+          <div class="container">
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-6">
+                &copy; AWLA Ghana 2024 | Developed by
+                <a href="wa.me/14244429288">Digniverse LLC</a>
+              </div>
+              <div class="col-lg-6 text-lg-end">
+                <div class="social-icons">
+     <a href="index.html#"><i
+              id="instagramIcon"
+              class="fab fa-instagram"
+              style="color: #c13584"
+             ></i></a>
+                  <a href="index.html#"><i class="fa-brands fa-x-twitter" style="color: #050505"></i></a>
+                  <a href="index.html#"><i class="fab fa-linkedin" style="color: #5d6ff9"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer close -->
+      <div id="preloader">
+        <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+      <div class="sc-opt sc-mt">
+        <div class="sc-icon"><i class="fa fa-eyedropper"></i></div>
+        <span class="opt tc1" data-color="scheme-01"></span>
+        <span class="opt tc2" data-color="scheme-02"></span>
+        <span class="opt tc3" data-color="scheme-03"></span>
+        <span class="opt tc4" data-color="scheme-04"></span>
+        <span class="opt tc5" data-color="scheme-05"></span>
+        <span class="opt tc6" data-color="scheme-06"></span>
+        <span class="opt tc7" data-color="scheme-07"></span>
+      </div>
+    </div>
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/enquire.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.plugin.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/jarallax.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/designesia.js"></script>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/667aece19d7f358570d34366/1i182qkf5';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+  </body>
+</html>
