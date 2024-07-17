@@ -19,3 +19,23 @@ section{
 .de_testi.opt-2 blockquote{
     background: #ffffff !important;
 }
+
+/* By Dev Quarm */
+
+@media (max-width: 600px) {
+  .row.align-items-center {
+    display: grid !important;
+    place-items: center;
+  }
+  section.no-top.relative.z1000 {
+    top: 15vh;
+  }
+  .col-md-4.mb-sm-30.wow.fadeInRight.animated,
+  .col-lg-4.col-md-6.mb30 {
+    flex-basis: 20rem;
+    flex-grow: 1;
+  }
+  .col-md-4 {
+    width: 100%;
+  }
+}

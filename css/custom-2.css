@@ -1,33 +1,53 @@
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond:400,200,300,500,600,700,800);
 @import url(https://fonts.googleapis.com/css?family=Inter:400,200,300,500,600,700,800);
 
-*{
-    --title-font: "EB Garamond";
-    --title-font-color: #404040;
-    --body-font: "Inter";
-    --body-font-size: 16px;
+* {
+  --title-font: "EB Garamond";
+  --title-font-color: #404040;
+  --body-font: "Inter";
+  --body-font-size: 16px;
 }
 
-body{
-    font-weight: 400;
+body {
+  font-weight: 400;
 }
 
-#mainmenu{
-    font-family: var(--body-font);
+#mainmenu {
+  font-family: var(--body-font);
 }
 
-section{
-    background: #f5f5f5;
+section {
+  background: #f5f5f5;
 }
 
-a.btn-custom{
-    color:#000000;
+a.btn-custom {
+  color: #000000;
 }
 
-.de_testi.opt-2 blockquote{
-    background: #ffffff !important;
+.de_testi.opt-2 blockquote {
+  background: #ffffff !important;
 }
 
-.bloglist .post-text{
-    background: #ffffff;
+.bloglist .post-text {
+  background: #ffffff;
+}
+
+/* By Dev Quarm */
+
+@media (max-width: 600px) {
+  .row.align-items-center {
+    display: grid !important;
+    place-items: center;
+  }
+  section.no-top.relative.z1000 {
+    top: 15vh;
+  }
+  .col-md-4.mb-sm-30.wow.fadeInRight.animated,
+  .col-lg-4.col-md-6.mb30 {
+    flex-basis: 20rem;
+    flex-grow: 1;
+  }
+  .col-md-4 {
+    width: 100%;
+  }
 }
